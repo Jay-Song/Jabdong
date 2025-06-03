@@ -6,8 +6,10 @@ def main():
     idx = 0
     cam = cv2.VideoCapture(0)
 
+    # sometimes, you need to use v4l2 control to set the camera properties
     cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
     cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
+    # cam.set(cv2.CAP_PROP_FPS, 30)
 
     while True:
         # Read a frame from the camera
